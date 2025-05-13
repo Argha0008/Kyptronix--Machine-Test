@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Krishna Production & Boutique</title>
+  <style>
+    :root {
+      --main-color: #8e005d;
+      --accent-color: #fce4ec;
+      --text-dark: #2c2c2c;
+      --bg-light: #fff0f6;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fff;
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--bg-light);
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      margin: 0;
+      color: var(--main-color);
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--main-color);
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #fce4ec, #fff);
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: var(--main-color);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background-color: var(--main-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #5a003a;
+    }
+
+    .content h2 {
+      color: var(--main-color);
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 300px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    .card img {
+      width: 100%;
+    }
+
+    .card h3 {
+      padding: 15px;
+      color: var(--main-color);
+    }
+
+    footer {
+      background-color: var(--bg-light);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    input, textarea {
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+      margin: 10px auto;
+      display: block;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: black;
+    }
+
+    #response {
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Krishna Production & Boutique</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#business">Business</a>
+      <a href="#collection">Collection</a>
+      <a href="#join">Join Us</a>
+      <a href="#review">Reviews</a>
+      <a href="#" onclick="openModal()">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Where Tradition Meets Elegance</h2>
+    <p>Welcome to Krishna Production & Boutique – weaving heritage into every thread and design.</p>
+    <a href="#collection" class="btn">Explore Collection</a>
+  </section>
+
+  <section id="about" class="content">
+    <h2>About Us</h2>
+    <p>"Krishna Production & Boutique is a curated blend of India’s rich textile legacy and modern fashion sensibilities. We empower skilled regional artisans by bringing their handcrafted sarees and boutique designs to a global audience, one timeless piece at a time.".</p>
+  </section>
+
+  <section id="business" class="content">
+    <h2>Business Plan</h2>
+    <p>
+      <strong>Target Audience:</strong> Our core audience includes saree enthusiasts, modern women aged 20–50 seeking a blend of tradition and style, 
+as well as members of the Indian diaspora worldwide who wish to stay connected to their roots through cultural fashion..<br>
+      <strong>Monetization:</strong>We generate revenue through direct-to-consumer online sales, limited-edition premium collections, and personalized 
+styling consultations. Future offerings include subscription boxes for festive sarees, collaborations with designers, 
+and artisan exclusives.
+<br>
+      <strong>Vision:</strong> Our vision is to build a sustainable digital ecosystem that uplifts rural weaving communities while preserving the 
+soul of Indian textile arts. We aspire to become the go-to platform for authentic, story-rich sarees — bridging 
+tradition and modern fashion for global audiences.
+    </p>
+  </section>
+
+  <section id="collection" class="content">
+    <h2>Our Collection</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="product-jpeg-500x500.webp" alt="Banarasi Saree" />
+        <h3>Banarasi Saree</h3>
+      </div>
+      <div class="card">
+        <img src="Red1-600x761.jpg" alt="Silk Saree" />
+        <h3>Silk Saree</h3>
+      </div>
+      <div class="card">
+        <img src="il_570xN.5377581507_nwjm.webp" alt="Tant Saree" />
+        <h3>Tant Saree</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="content">
+    <h2>Join Our Community</h2>
+    <form onsubmit="joinUs(); return false;">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <button class="btn" type="submit">Join Now</button>
+      <p id="response"></p>
+    </form>
+  </section>
+
+  <section id="review" class="content">
+    <h2>Customer Reviews</h2>
+    <p><strong>Ashis Dalal:</strong> "Loved the silk saree I ordered for my wife – such elegance and comfort!"</p>
+    <p><strong>Krishna Dalal:</strong> "Felt like I was wearing tradition itself. Great service!"</p>
+    <p><strong>Saradamoyee Das:</strong> "The Banarasi weave is stunning. Will order again!"</p>
+  </section>
+
+  <section id="contact" class="content">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:ashisdalal82@gmail.com">ashisdalal82@gmail.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Krishna Production & Boutique. Crafted with love and legacy.
+  </footer>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" required />
+      <input type="password" placeholder="Password" required />
+      <button class="btn" onclick="login()">Login</button>
+      <p id="loginResponse"></p>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('loginModal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('loginModal').style.display = 'none';
+    }
+
+    function login() {
+      document.getElementById('loginResponse').innerText = "Login successful (demo)";
+    }
+
+    function joinUs() {
+      document.getElementById('response').innerText = "Thanks for joining! We'll keep in touch.";
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('loginModal');
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
